@@ -34,11 +34,16 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                     <a class="nav-link" href="{{route('home')}}">Dashboard</a>
+                    @role('admin')
                     <a class="nav-link" href="{{route('data.siswa')}}">Data Siswa</a>
                     <a class="nav-link" href="{{route('manage-kegiatan')}}">Manage Kegiatan</a>
+                    @endrole
+                    @role('bendahara')
                     <a class="nav-link" href="{{route('verifikasi-pendaftaran')}}">Verifikasi Pendaftaran</a>
-                    <a class="nav-link" href="">Laporan</a>
-
+                    @endrole
+                    @role('student')
+                    <a class="nav-link" href="{{route('kegiatan.tampilkan')}}">Cek Kegiatan</a>
+                    @endrole
                     </ul>
 
                     <!-- Right Side Of Navbar -->

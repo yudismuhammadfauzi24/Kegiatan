@@ -15,7 +15,7 @@
                 perhatian isi data dibawah ini dengan benar.
             </div>
 
-            <form action="{{route('manage-kegiatan.update',$kegiatan->id)}}" method="post">
+            <form action="{{route('update.data.kegiatan',$kegiatan->id)}}" method="post">
                 @csrf
                     @method('PATCH')
 
@@ -36,7 +36,7 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="image">Image</label>
-                            <input type="text" name="image" class="form-control" id="image" value="{{$kegiatan->image}}">
+                            <input type="file" name="image" class="form-control" id="image" value="{{$kegiatan->image}}">
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -64,13 +64,13 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="tgl_awal">Tanggal Mulai</label>
-                            <input type="text" name="tgl_awal" class="form-control" id="tgl_awal" value="{{$kegiatan->tgl_awal}}">
+                            <input type="date" name="tgl_awal" class="form-control" id="tgl_awal" value="{{$kegiatan->tgl_awal}}">
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="tgl_selesai">Tanggal Selesai</label>
-                            <input type="text" name="tgl_selesai" class="form-control" id="tgl_selesai" value="{{$kegiatan->tgl_selesai}}">
+                            <input type="date" name="tgl_selesai" class="form-control" id="tgl_selesai" value="{{$kegiatan->tgl_selesai}}">
                         </div>
                     </div>
                     <div class="col-md-12">
