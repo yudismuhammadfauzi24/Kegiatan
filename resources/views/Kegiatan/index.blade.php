@@ -58,9 +58,9 @@
                                             <td>{{$it->tgl_selesai}}</td>
                                         
                                         <td>
-                                            <form action="{{route('manage-kegiatan.delete', $it->id) }}" method="post">
-                                                @csrf
-                                                @method('DELETE')
+                                        <form action="{{route('destroy.data.activity', $it->id)}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
                                             <a href="{{route('manage-kegiatan.add-form.edit-kegiatan', $it->id)}}" class="btn btn-secondary btn-sm">Edit</a>
                                              <button class="btn btn-secondary btn-sm" type="submit">Hapus</button>
                                         </form>

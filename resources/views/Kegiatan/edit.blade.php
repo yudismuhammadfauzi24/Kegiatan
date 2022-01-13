@@ -15,7 +15,7 @@
                 perhatian isi data dibawah ini dengan benar.
             </div>
 
-            <form action="{{route('update.data.kegiatan',$kegiatan->id)}}" method="post">
+            <form action="{{route('update.data.kegiatan',$kegiatan->id)}}" method="post" enctype="multipart/form-data">
                 @csrf
                     @method('PATCH')
 
