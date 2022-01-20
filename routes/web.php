@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes(); 
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/welcome', 'WelcomeController@index')->name('welcome');
 
 Route::group(['prefix' => 'kegiatan'], function(){
     Route::get('/tampilkan', 'KegiatanController@show')->name('kegiatan.tampilkan');
@@ -71,4 +72,8 @@ Route::group(['prefix' => 'update'], function(){
 });
 Route::group(['prefix' => 'destroy'], function(){
     route::delete('data/siswa/{user}', 'DatasiswaController@destroy')->name('destroy.data.siswa');
+});
+Route::group(['prefix' => 'cetak'], function(){
+    route::get('activity', 'Report\ActivityController@index')->name('cetak.activity');
+    route::get('data-activity', 'Report\ActivityController@edit')->name('cetak.semua-data.activity');
 });

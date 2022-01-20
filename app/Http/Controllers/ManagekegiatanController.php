@@ -32,7 +32,7 @@ class ManagekegiatanController extends Controller
 
        $this->storeImage($moment);
 
-       flash()->success('Data Kegiatan berhasil dihapus');
+       flash()->success('Data Kegiatan berhasil dibuat');
         return redirect(route('manage-kegiatan'));
     }
 
@@ -72,15 +72,14 @@ class ManagekegiatanController extends Controller
 
         $activity->delete($request->all());
 
-        if (\File::exists(public_patch('storage/' .$activity->image))) {
-            \File::delete(public_patch('storage/' .$activity->image));
+        if (\File::exists(public_path('storage/' . $activity->image))) {
+            \File::delete(public_path('storage/' . $activity->image));
         }
-
+       
         return redirect()->back();
     }
-    public function update(Request $request,Activity $activity)
+    public function update(Request $request, Activity $activity)
     {
-
         $activity->update($request->all());
 
         $this->storeImage($activity);

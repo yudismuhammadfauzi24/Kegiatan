@@ -13,17 +13,18 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <a href="{{route('manage-kegiatan.add-form')}}" class="btn btn-secondary">Tambah Kegiatan</a>
+                            <a href="{{route('cetak.semua-data.activity')}}" class="btn btn-secondary">cetak semua data</a>
                         </div>
-                        <form action="" method="post">
+                        <form action="{{route('cetak.activity')}}" method="get">
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <input type="date" class="form-control">
+                                        <input type="date" name="awal" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <input type="date" class="form-control">
+                                        <input type="date" name="akhir" class="form-control">
                                     </div>
                                 </div>
                                 <div>
@@ -39,9 +40,7 @@
                                         <th>Nama Kegiatan</th>
                                         <th>IDR</th>
                                         <th>Status</th>
-                                        <th>Keterangan</th>
-                                        <th>tgl_mulai</th>
-                                        <th>tgl_selesai</th>
+                                        <th>Tanggal</th>
                                         <th>Option</th>
                                     </tr>
                                 </thead>
@@ -52,10 +51,7 @@
                                             <td>{{$it->nama_activity}}</td>
                                             <td>{{$it->idr}}</td>
                                             <td>{{$it->status}}</td>
-                                            <td>{{$it->desc}}</td>
-                                            <td>{{$it->jumlah_peserta}}</td>
-                                            <td>{{$it->tgl_awal}}</td>
-                                            <td>{{$it->tgl_selesai}}</td>
+                                            <td>{{$it->created_at->format('Y-m-d')}}</td>
                                         
                                         <td>
                                         <form action="{{route('destroy.data.activity', $it->id)}}" method="post">
