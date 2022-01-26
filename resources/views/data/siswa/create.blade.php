@@ -1,19 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria current="page">Tambah Data Siswa</li>
-        </ol>
-    </nav>
-
-    <div class="card">
-        <div class="card-body">
-            <div class="alert alert-primary" role="alert">
-                <h3>Perhatian !!!</h3>
-                perhatian isis data dibawah ini dengan benar.
-            </div>
+<div class="container " >
+    <div class="row justify-content-center" style="margin-top: -100px">
+        <div class="col-md-8">
+            <div class="card border-0">
+                <div class="card-body">
+                    <div class="alert alert-primary" role="alert">
+                        <h3>Perhatian !!!</h3>
+                        Silahkan isi data dibawah ini dengan benar.
+                    </div>
+                    
 
             <form action="{{route('tambah-data.store')}}" method="post">
                 @csrf

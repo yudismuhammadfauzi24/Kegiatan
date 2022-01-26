@@ -23,7 +23,7 @@ Route::get('/welcome', 'WelcomeController@index')->name('welcome');
 Route::group(['prefix' => 'kegiatan'], function(){
     Route::get('/tampilkan', 'KegiatanController@show')->name('kegiatan.tampilkan');
     Route::get('/create/{kegiatan}', 'KegiatanController@create')->name('kegiatan.create');
-    Route::post('/store/{user}','KegiatanController@store')->name('kegiatan.store');
+    Route::post('/store','KegiatanController@store')->name('kegiatan.store');
 });
 Route::get('/pendaftaran', 'DaftarController@index')->name('daftar.index');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
@@ -56,7 +56,7 @@ Route::group(['prefix' => 'verifikasi-pendaftaran'], function(){
     Route::get('/verifikasi-pendaftaran','VerifikasiController@index')->name('verifikasi-pendaftaran');
     Route::get('/ulang','DaftarUlangController@index')->name('verifikasi-pendaftaran.ulang');
     Route::get('/peserta','PesertaController@index')->name('verifikasi-pendaftaran.peserta');
-    Route::patch('/acceptp/{register}', 'PesertaController@edit')->name('verifikasi-pendaftaran.accept');
+    Route::patch('/acceptp/{register}', 'PesertaController@store')->name('verifikasi-pendaftaran.accept');
 });
 
 Route::group(['prefix' => 'user'], function(){

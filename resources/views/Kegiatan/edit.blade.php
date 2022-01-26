@@ -2,13 +2,9 @@
 
 @section('content')
 <div class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria current="page">Edit Data Kegiatan</li>
-        </ol>
-    </nav>
-
-    <div class="card">
+<div class="row justify-content-center" style="margin-top: -70px">
+        <div class="col-md-8">
+            <div class="card border-0">
         <div class="card-body">
             <div class="alert alert-primary" role="alert">
                 <h3>Perhatian !!!</h3>

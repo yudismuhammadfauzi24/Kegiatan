@@ -2,36 +2,33 @@
 
 @section('content')
 <div class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria current="page">Tambah Data Siswa</li>
-        </ol>
-    </nav>
-
-    <div class="card">
-        <div class="card-body">
-            <div class="alert alert-primary" role="alert">
-                <h3>Perhatian !!!</h3>
-                perhatian isis data dibawah ini dengan benar.
-            </div>
+    <div class="row justify-content-center" style="margin-top: -100px">
+        <div class="col-md-8">
+            <div class="card border-0">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="alert alert-primary" role="alert">
+                            <h3>Perhatian !!!</h3>
+                            perhatian isi data dibawah ini dengan benar.
+                        </div>
 
             <form action="{{route('updated.data.siswa', $user->id)}}" method="post">
                 @csrf
                 @method('PATCH')
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="">NISN</label>
                             <input type="text" name="nisn" class="form-control" id="" value="{{$user->students->first()->nisn ?? 'Belum tersedia'}}">
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Nama</label>
                             <input type="text"  class="form-control" id="" value="{{$user->name}}">
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Jenis Kelamin</label>
                             <select name="gender" class="form-control" id="">
@@ -41,7 +38,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Agama</label>
                             <select name="religion" class="form-control" id="">
@@ -53,7 +50,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Jurusan</label>
                             <select name="major" class="form-control" id="">
@@ -66,7 +63,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Kelas</label>
                             <select name="class" class="form-control" id="">
@@ -77,13 +74,13 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Nomor HP</label>
                             <input type="text" name="phone" class="form-control" id="" value="{{$user->students->first()->phone ?? 'Belum tersedia'}}">
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="">Status</label>
                             <select name="status" class="form-control" id="">

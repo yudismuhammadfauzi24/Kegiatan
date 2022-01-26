@@ -2,14 +2,9 @@
 
 @section('content')
     <div class="container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page"> Data Kegiatan</li> 
-               </ol>
-             </nav>
-        <div class="row">
+        <div class="row mb-3" style="margin-top: -70px">
             <div class="col-md-12">
-                <div class="card">
+                <div class="card border-0">
                     <div class="card-body">
                         <div class="mb-3">
                             <a href="{{route('manage-kegiatan.add-form')}}" class="btn btn-secondary">Tambah Kegiatan</a>
@@ -17,21 +12,27 @@
                         </div>
                         <form action="{{route('cetak.activity')}}" method="get">
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-5">
                                     <div class="form-group">
                                         <input type="date" name="awal" class="form-control">
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-5">
                                     <div class="form-group">
                                         <input type="date" name="akhir" class="form-control">
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="btn btn-secondary" type="submit">Cari Data</button>
+                                    <button type="submit" class="btn btn-secondary">Simpan Data Siswa</button>
                                 </div>
                             </div>
                         </form>
+                    </div>
+                </div>
+                <div class="row">
+            <div class="col-md-12">
+                <div class="card border-0">
+                    <div class="card-body">
                         <div class="mt-3">
                             <table class="table table-striped">
                                 <thead>
