@@ -33,25 +33,27 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                    @auth()
                         <li class="nav-item">
-                            <a href="{{route('home')}}" class="nav-link" >{{ __('Dashboard') }}</a>
+                            <a href="{{route('home')}}" class="nav-link text-white" >{{ __('Dashboard') }}</a>
                         </li>
+                    @endauth
                         @role('admin')
                             <li class="nav-item">
-                                <a href="{{route('data.siswa')}}" class="nav-link">{{ __('Data Siswa') }}</a>
+                                <a href="{{route('data.siswa')}}" class="nav-link text-white">{{ __('Data Siswa') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('manage-kegiatan')}}" class="nav-link">{{ __('Manage Kegiatan') }}</a>
+                                <a href="{{route('manage-kegiatan')}}" class="nav-link text-white">{{ __('Manage Kegiatan') }}</a>
                             </li>
                         @endrole
                         @role('bendahara')
                             <li class="nav-item">
-                                <a href="{{route('verifikasi-pendaftaran')}}" class="nav-link">{{ __('Verifikasi Pendaftaran ') }}</a>
+                                <a href="{{route('verifikasi-pendaftaran')}}" class="nav-link text-white">{{ __('Verifikasi Pendaftaran ') }}</a>
                             </li>
                         @endrole
                         @role('student')
                             <li class="nav-item">
-                                <a href="{{route('kegiatan.tampilkan')}}" class="nav-link">{{ __('Cek Kegiatan') }}</a>
+                                <a href="{{route('kegiatan.tampilkan')}}" class="nav-link text-white">{{ __('Cek Kegiatan') }}</a>
                             </li>
                         @endrole
                     </ul>

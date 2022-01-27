@@ -10,7 +10,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                    @auth()
                     <a class="nav-link text-white" href="{{route('home')}}">Dashboard</a>
+                    @endauth
                     @role('admin')
                     <a class="nav-link text-white" href="{{route('data.siswa')}}">Data Siswa</a>
                     <a class="nav-link text-white" href="{{route('manage-kegiatan')}}">Manage Kegiatan</a>

@@ -19,9 +19,9 @@
 <div 
 class="jumbotron">
     <div class="container">
-        <h4>Management Event</h4>
-        <h1>SMK AL-BAHRI</h1>
-        <h6>Jl. Yon Armed 7 No.143, RT.003/RW.006, Cikiwul, Bantargebang, Kota Bks, Jawa Barat 17152</h6>
+        <h4 class="text-white">Management Event</h4>
+        <h1 class="text-white">SMK AL-BAHRI</h1>
+        <h6 class="text-white">Jl. Yon Armed 7 No.143, RT.003/RW.006, Cikiwul, Bantargebang, Kota Bks, Jawa Barat 17152</h6>
     </div>
 </div>
     @yield('content')
