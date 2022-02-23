@@ -60,7 +60,7 @@
                                         </span>
                                     </td>
                                     <td>
-                                            <a href="" class="btn btn-secondary btn-sm">Cetak sertifikat</a>
+                                            <a href="{{route('cetak.sertifikat', $register->id)}}" class="btn btn-secondary btn-sm">Cetak sertifikat</a>
                                         </form> 
                                     </td>
                                 </tr>

@@ -55,6 +55,9 @@
                             <li class="nav-item">
                                 <a href="{{route('kegiatan.tampilkan')}}" class="nav-link text-white">{{ __('Cek Kegiatan') }}</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{route('activity')}}" class="nav-link text-white">{{ __('KegiatanKu') }}</a>
+                            </li>
                         @endrole
                     </ul>
 
