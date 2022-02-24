@@ -23,6 +23,15 @@
         h1{
             color : #ffD700;
         }
+        .pt-10{
+            margin-top:18rem;
+        }
+        .ml-10{
+            margin-left:45rem;
+        }
+        .-mt-10{
+            margin-top: -140px;
+        }
     </style>
 </head>
 
@@ -30,6 +39,11 @@
     <div class="content">
         <div class="">
             <h1 class="ml-5 pt-3">{{$sertifikat->user->name}}</h1>
+            <div>
+                <img class="ml-10 -mt-10" width="150px" src="data:image/png;base64,{{DNS2D::getBarcodePNG
+                ("192.168.54.228/Kegiatan/public/resoult/{$sertifikat->id}",'QRCODE')}}" alt="barcode" >
+            </div>
+            </div>
         </div>
     </div>
 </body>

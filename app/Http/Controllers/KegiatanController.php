@@ -38,7 +38,6 @@ class KegiatanController extends Controller
             'status' => $request->status,
             'qty' => $request->qty,
         ]);
-
         $to = Mail::to($user->email)->send(new PendaftaranMail($register));
 
         return redirect()->back();
